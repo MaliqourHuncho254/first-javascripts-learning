@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascripts tutorial</title>
-</head>
-<body>
-    <!--my first lesson on starting javascripts-->
-    <script>
-        //alert("Welcome to javascripts class");
+     //alert("Welcome to javascripts class");
         //var num1 =10;
         //var num2 =20;
         //var ans =num1+num2;
@@ -23,9 +13,5 @@
        const myHeading = document.querySelector = ("h1");
        myHeading.textContent = "Hello world!";
          */
-         const myHeading = document.querySelector("h1");
-        myHeading.textContent = "Hello world!";
-
-    </script>
-</body>
-</html>
+       const myHeading = document.querySelector("h1");
+       myHeading.textContent = "Hello world!";
