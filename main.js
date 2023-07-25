@@ -21,3 +21,9 @@
 
        let myVariable = "Bob";
         myVariable = "Steve";
+
+        /*
+        everything in between a commet
+        */
+       //this is a commet
+       
