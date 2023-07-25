@@ -16,5 +16,8 @@
        const myHeading = document.querySelector("h1");
        myHeading.textContent = "Hello world!";
 
-       let myVariable;
-       myVariable = "Collins";
+       //let myVariable;
+       //myVariable = "Collins";
+
+       let myVariable = "Bob";
+        myVariable = "Steve";
