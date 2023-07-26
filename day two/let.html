@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">Age tryout</p>
+    <script>
+        let age = 17;
+        if(age >= 18 && age <=85){
+            console.log("you are allowed to vote")
+        }else if(age >=1 && age <=17){
+            console.log("you are too young to vote")
+        }else{
+            console.log("you can not vote yet!")    
+        }
+        document.getElementById("demo").innerHTML = "Age tryout!";
+    </script>
+</body>
+</html>
