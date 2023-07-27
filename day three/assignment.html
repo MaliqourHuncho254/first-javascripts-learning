@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Making the three value represent the greatest common factor</h2>
+    <!--let us use javascripts on working this ecample-->
+    <script>
+        var num1 =parseInt(prompt("Plz insert the largest value"));
+        var num2 =parseInt(prompt("Plz insert the largest value"));
+        var num3 =parseInt(prompt("Plz insert the largest value"));
+
+        //finding Greatest common factor on the three value
+        
+        if (num1 > num2 && num1 > num3){
+            alert("The answer is" + num1);
+        }
+        
+        else if(num2 > num1 && num2 > num3){
+            alert("The answer is" + num2);
+        }
+        
+        else if(num3 > num1 && num3 > num2){
+            alert("The answer is" + num3);
+        }
+        
+        else{
+            alert("invalid information");
+        }
+    </script>
+</body>
+</html>
