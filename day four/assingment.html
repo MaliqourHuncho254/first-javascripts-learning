@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="alert.html">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        h4{
+            align-items: center;
+            text-align: center;
+            font-size: large;
+        }
+        p{
+            align-items: center;
+            text-align: center;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <h4>How to create a safaricom prompt using a javascripts</h4>
+    <p>0:sh 20 (30 miins, 3hrs)</p>
+    <p id="unlimited" >1:unlimited SMS</p>
+    <p id="Daily">2:Daily SMS</p>
+    <p>03:Weekly SMS</p>
+    <p>4:Monthly SMS</p>
+    <p>5:My5 unlimited SMS</p>
+    <p>6:Buy for other number</p>
+    <p>7:Check Balance</p>
+    <p>8:Chat Ibambe</p>
+    <p>98:MORE</p>
+    <script>
+        let text = "We are trying to use prompt while making a link";
+        let result = text.link("alert.html");
+        document.getElementById('unlimited').style = "color:blue";
+        document.getElementById('Daily').style ="color:blue"; 
+
+    </script>
+</body>
+</html>
