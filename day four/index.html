@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="firstname" placeholder="firstname"><br>
+        <input type="text" id="lastname" placeholder="lastname"><br>
+        <input type="text" id="fullname" placeholder="fullname"><br>
+        <button>Display fulll name</button>
+    </form>
+    <script>
+        function showfullmame(){
+            let first = document.getElementById("firstname");
+            let last  =document.getElementById("lastname");
+            let fullname = first + "" + last;
+            document.getElementById("fullname").innerHTML=fullname;
+        }
+    </script>
+</body>
+</html>
