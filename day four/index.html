@@ -10,14 +10,14 @@
         <input type="text" id="firstname" placeholder="firstname"><br>
         <input type="text" id="lastname" placeholder="lastname"><br>
         <input type="text" id="fullname" placeholder="fullname"><br>
-        <button onclick="document.getElementById('fullname')">Display fulll name</button>
+        <button onclick="showfullmame()">Display fulll name</button>
     </form>
     <script>
         function showfullmame(){
-            let first = document.getElementById("firstname");
-            let last  =document.getElementById("lastname");
+            let first = document.getElementById("firstname").value;
+            let last  =document.getElementById("lastname").value;
             let fullname = first + " " + last;
-            document.getElementById("fullname").innerHTML=fullname;
+            document.getElementById("fullname").value=fullname;
         }
     </script>
 </body>
