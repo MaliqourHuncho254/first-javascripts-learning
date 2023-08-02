@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!--div one-->
+    <div class="card">
+        <h1>Discount Calculator</h1>
+        <form action="#">
+            <div class="input-item">
+                <label for="amount">Enter bill amount</label>
+                <input type="text" id="amount">
+            </div>
+            <!--div two-->
+            <div class="input-item">
+                <label for="discount-percentage">Select discount</label>
+
+                <select name="percentage" id="discount-percentage">
+                    <option value="0">0</option>
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <!--div three-->
+
+            <div class="input-item">
+                <label for="pay" aria-disabled="true" >Final pay</label>
+                <input type="text" id="pay" disabled>
+            </div>
+
+            <!--div four-->
+
+            <button type="submit" class="calculate">Calculate</button>
+            <input type="text" value="Reset" class="reset">
+
+
+        </form>
+    </div>
+</body>
+</html>

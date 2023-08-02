@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: white;
+    }
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h2{
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    td{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h3{
+        color: #0000;
+        font-size: 22px;
+        font-weight: 400;
+        font-style: normal;
+        font-family: "Roboto", Helvetica, sans-serif;
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+    }
+    h4{
+        color: #0000;
+        font-size: 17.5px;
+        font-weight: 100;
+        font-style: normal;
+        font-family: "Roboto", Helvetica, sans-serif;
+        text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+        text-transform: uppercase;
+
+    }
+</style>
+<body>
+    <script>
+        var emptyCart = true;
+        var salesTotal = 0;
+        var cellNum = 1;
+        $(document).ready(function(){
+        $('button').click(function(){
+            var parent = $(this).parent();
+            var subtract = parseInt(parent.find('#subtract').val(), 10);
+            var current = parseInt(parent.find('.number p').text(),10);
+            var newVal = current - subtract; 
+            //$('.number p').effect('explode');
+            parent.find('.number p').text(newVal);
+        });
+    });
+    
+        function addItem(selectedItem) {
+            if (emptyCart === true) {
+                document.getElementById('shoppingCart').deleteRow(0);
+                emptyCart = false;
+            }
+            var curItem = document.getElementById("turtle").rows[selectedItem].cells;
+            var selectedItem = curItem[0].innerHTML;
+            var itemPrice = curItem[1].innerHTML;
+            var lastItem = document.getElementById("shoppingCart").rows.length;
+            var cartTable = document.getElementById("shoppingCart");
+            var newRow = cartTable.insertRow(lastItem);
+            var trcellNum = "tr" + cellNum;
+            newRow.id = trcellNum;
+            ++cellNum;
+            var itemCell = newRow.insertCell(0);
+            itemCell.innerHTML = selectedItem;
+            var priceCell = newRow.insertCell(1);
+            priceCell.innerHTML = itemPrice;
+            var actionCell = newRow.insertCell(2);
+            actionCell.innerHTML = "<input type='button' value='Remove' " + "onclick=\"removeItem('" + trcellNum + "')\" />";
+            salesTotal += parseFloat(itemPrice.substring(1));
+            salesTotal += parseFloat(itemPrice.substring(2));
+            document.getElementById('total').innerHTML = "<strong>Subtotal</strong>: $" + salesTotal.toFixed(2);
+            document.getElementById('taxtotal').innerHTML = "<strong>Tax </strong>: $" + (salesTotal * 0.13).toFixed(2);
+            document.getElementById('grandtotal').innerHTML = "<strong>Grand Total </strong>: $" + (salesTotal * 0.14 + salesTotal).toFixed(2);
+           
+            document.getElementById('discountsample').innerHTML = " Discount Sample: $" + (-10).toFixed(2);
+         
+        document.getElementById('discounts').innerHTML = "<strong>Discount </strong>: $" + (- discount12).toFixed(2);
+            
+        }
+    
+    
+        function removeItem(rowId) {
+            if (document.getElementById("shoppingCart").rows.length > 1) {
+                var delRow = document.getElementById(rowId).rowIndex;
+                var itemPrice = document.getElementById("shoppingCart").rows[delRow].cells[1].innerHTML;
+                salesTotal -= parseFloat(itemPrice.substring(1));
+                document.getElementById("shoppingCart").deleteRow(delRow);
+                document.getElementById('total').innerHTML = "<strong>Sales Total</strong>: $" + salesTotal.toFixed(2);
+                document.getElementById('taxtotal').innerHTML = "<strong>Tax </strong>: $" + (salesTotal * 0.13).toFixed(2);
+                document.getElementById('grandtotal').innerHTML = "<strong>Grand Total </strong>: $" + (salesTotal * 0.14 + salesTotal).toFixed(2);
+                
+                document.getElementById('discountsample').innerHTML = "<strong>Discount </strong>: $" + (- 10).toFixed(2);
+        
+                document.getElementById('discounts').innerHTML = "<strong>Discount </strong>: $" + (- discount12).toFixed(2);
+        
+        
+            } else {
+                document.getElementById("shoppingCart").rows[0].deleteCell(2);
+                document.getElementById("shoppingCart").rows[0].deleteCell(1);
+                document.getElementById("shoppingCart").rows[0].cells[0].innerHTML = "Your shopping cart is empty"
+                salesTotal = 0;
+                document.getElementById('total').innerHTML = "<strong>SubTotal</strong>: $" + salesTotal.toFixed(2);
+                document.getElementById('taxtotal').innerHTML = "<strong>Tax </strong>: $" + (salesTotal * 0.13).toFixed(2);
+                document.getElementById('grandtotal').innerHTML = "<strong>Grand Total </strong>: $" + (salesTotal * 0.14 + salesTotal).toFixed(2);
+                
+                document.getElementById('discountsample').innerHTML = "<strong>Discount </strong>: $" + (- 10).toFixed(2);
+        document.getElementById('discounts').innerHTML = "<strong>Discount </strong>: $" +  ( - discount12).toFixed(2);
+        
+        
+        
+                emptyCart = true;
+                cellNum = 1;
+        
+     };
+         
+      }
+       
+    function recordToFilename() {
+                var input = document.getElementById('discountvalue'),
+            discount12 = input.value;
+    alert (discount12);
+    };
+         
+          
+       
+    
+    
+    
+    </script>
+    
+    <h4> Products </h4>
+    
+    <table border="1" id="turtle">
+        <tr id="ch1">
+            <td>Discount</td>
+            <td>$34.99</td>
+            <td>
+                <input type="button" value="Add" onclick="addItem(document.getElementById('ch1').rowIndex)" />
+            </td>
+        </tr>
+        <tr id="ch2">
+            <td>Thanks</td>
+            <td>$14.99</td>
+            <td>
+                <input type="button" value="Add" onclick="addItem(document.getElementById('ch2').rowIndex)" />
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+     <h4> Your Shopping Cart </h4>
+    
+    <table id="shoppingCart" border="1">
+        <tr>
+            <td>Your shopping cart is empty</td>
+        </tr>
+    </table>
+     <h4 id="total"><strong>SubTotal</strong></h4>
+        <h4 id="discounts"><strong>Discount</strong></h4>
+        
+        <h4 id="discountsample">Discount</h4>
+    
+     <h4 id="taxtotal"><strong>Tax</strong></h4>
+    
+        <h3 id="grandtotal"><strong>Grand Total</strong></h3>
+    
+    <input  id="discountvalue" type="number"> 
+    <input type="button" onclick="recordToFilename();" id="submitdis" value="Submit Discount"/>
+    
+        
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--discount calculation working-->
+    <script>
+        //Discoutn Functionality
+
+        function discountCart(){
+            var discount = 20
+            let cartCost = localStorage.getItem('totalCost');
+
+            if (cartCost >= 50){
+                localStorage.setItem('totalCost' , cartCost - discount);
+                console.log('discount', cartCost - discount);
+            }
+        }
+    </script>
+</body>
+</html>
