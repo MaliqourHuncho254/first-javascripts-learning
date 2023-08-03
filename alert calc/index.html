@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Discount Calcuate </title>
 </head>
 <body>
     <script>
+        function discountCalculate(){
         let paid =parseInt(prompt("Enter the discount in each number below"));
         let discount1 = 0.15 * paid1 ;
         let discount2 = 0.10 * paid2 ;
@@ -16,17 +17,16 @@
         let shopping2 = paid2 - discount2;
         let shopping3 = paid3 - discount3;
 
-        if (paid1 > 10000){
+        if (paid1 => 10000){
             alert ("The discount is " + discount1 + "\nThe answer after discount is "+ shopping1 );
-        }else if(paid2 > 6000){
+        }else if(paid2 => 6000){
             alert ("The discount is " + discount2 + "\nThe answer after discount is "+ shopping2 );
         }else if( paid3 < 5000) {
             alert ("The discount is " + discount3  +"\nThe answer after discount is "+ shopping3 );
         }else{
-            alert ("The discount is "+ discount1);
+            alert ("The discount is "+ discount);
         }
-        
-
+        }
     </script>
 </body>
 </html>

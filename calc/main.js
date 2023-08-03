@@ -1,5 +1,5 @@
-const calculate = document.querySelector('.calculate');
-const resetBtn = document.querySelector('.reset');
+const calculate = document.querySelector('alert()');
+const resetBtn = document.querySelector('alert()');
 
 calculate.addEventListener('click', (e) => {
     e.preventDefault();
@@ -15,4 +15,5 @@ calculate.addEventListener('click', (e) => {
 
 resetBtn.addEventListener('click', () => {
     window.location.reload();
+    alert ("The discount is "+ discountAmt);
 });

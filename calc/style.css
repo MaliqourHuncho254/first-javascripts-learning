@@ -27,7 +27,7 @@ input {
     width: 100%;
     background:none;
     border: none;
-    border-bottom: 3px solid #141E30;
+    border-bottom: 3px solid red;
     font-size: 15px;
     font-weight: bold;
 }
@@ -52,13 +52,13 @@ button {
 .card {
     width: min(500px, 90%);
     margin: 0 auto;
-    background: white;
+    background: green;
     padding: 1.5em 2em;
 }
 .calculate {
     padding: 0.8em 0;
     background: #141E30;
-    color: white;
+    color: goldenrod;
     font-weight: 700;
     border: none;
     font-size: 18px;
@@ -69,7 +69,7 @@ button {
 }
 .reset{
     padding: 0.8em 0;
-    background: #243B55;
+    background:black;
     color: white;
     font-weight: 700;
     border: none;
