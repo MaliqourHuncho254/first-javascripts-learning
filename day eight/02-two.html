@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="click">
+        Click the button to see the result
+    </p>
+    <form action="">
+        <input type="button" name="click" value="click" onclick="First();">
+    </form>
+    <script>
+        function First(){
+            let a = 123;
+            let b = 145;
+            try{
+                document.getElementById('click').innerHTML +=
+                '<br> Division of '+ a + 'by' + b + '=' + a/b;
+            }
+            catch{
+                alert(e.description);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function First(){
+            let a = 123;
+            let b = 0;
+            try{
+                if (b === 0){
+                    throw"Do not divide by zero";
+                }
+            }
+            catch(e){
+                document.getElementById('click').innerHTML += 
+                '<br>' + e + '<br>';
+            }finally{
+                document.getElementById('click').innerHTML += 
+                "Finally block will be executed";
+            }
+        }
+    </script>
+    <p id="click">Click the button to see the  results</p>
+    <form action="">
+        <input type="button" value="click" onclick="First()">
+    </form>
+</body>
+</html>
