@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index-assignment.html">
+    <link rel="stylesheet" href="bank_account.css">
+</head>
+<body>
+    <h1>Bank Account</h1>
+    <p id="deposit"></p>
+    <script>
+        function bankAccount(deposit , withdraw , checkbalance){
+            class Account{
+                constructor(deposit , withdraw , checkbalance){
+                    this.deposit = deposit;
+                    this.withdraw = withdraw;
+                    this.checkbalance = checkbalance;
+                }
+                deposit(){
+                   alert(this.deposit, 'You have deposit a certain amount');
+                };
+                withdraw(){
+                   alert(this.withdraw , 'You have withdraw a certain amount');
+                };
+                checkbalance(){
+                    alert(this.checkbalance , 'You have this balance in your account');
+                };
+            }
+
+            const accBalance = document.getElementById(accBalance);
+            const deposit = [];
+            const withdraw = [];
+            let totalBalance = 25; 
+            const userDeposit = document.getElementById('userDeposit');
+            const btnDeposit = document.getElementById('btnDeposit');
+            const userWithdraw = document.getElementById('userWithdraw');
+            const btnWithdraw = document.getElementById('btnWithdraw');
+            
+            //create our number formatter
+            const formatter = new int.NumberFormat
+        }
+    </script>
+</body>
+</html>
