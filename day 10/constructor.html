@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //use of constructor to avoid repeating yourself everytime.
+        class student{
+            constructor(email, name){
+                this.email = email ;
+                this.name = name ;
+            }
+            login(){
+                console.log(this.email , 'has logged in');
+            };
+            login(){
+                console.log(this.email , 'has logged in');
+            };
+        };
+        var studentOne = new student ('CollinsPowell@gmail.com', 'Collins Powell');
+        var studentOne = new student ('MathewMboya@gmail.com', 'Mathew Mboya');
+        var studentOne = new student ('RoyRono@gmail.com', 'Roy Rono');
+        var studentOne = new student ('Lyod Glephill@gmail.com', 'Lyod Glephill');
+        var studentOne = new student ('LeonOmedi@gmail.com', 'Leon Omedi');
+    </script>
+</body>
+</html>
