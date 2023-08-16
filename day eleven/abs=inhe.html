@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Employees{
+            #monthlyBonuss;
+            constructor(name, age , salary){
+                this.name = name;
+                this.age = age;
+                this.salary = salary;
+                this.#monthlyBonuss = 1500;
+
+            }
+            #finalSalary(){
+                let finalSalary = this.salary + this.#monthlyBonuss;
+                console.log("Your Monthly salary is" + finalSalary);
+
+            }
+            EmpDetails(){
+                //return your name is : ${this.name}, you are${this.age} years old , your monthly salary is ${this.salary}
+                return this.#finalSalary();
+
+            }
+        }
+        let emp1 = new Employees("Collins Powell", 20 , 450000);
+        console.log(emp1.EmpDetails());
+        //employees1 final salary
+        let emp2 = new Employees("Burden Powell", 29 , 4500);
+        console.log(emp2.EmpDetails());
+        //employees2 final salary
+        let emp = new Employees("Collins Powell", 20 , 450);
+        console.log(emp.EmpDetails());
+
+        class management extends Employees{
+            #yearlyIntress;
+            constructor(income , intress){
+                this.income = income;
+                this.#yearlyIntress = 45000;
+            }
+            #finalIncome(){
+                let finalIncome = this.income + this.#yearlyIntress;
+                console.log("Your Yearly intress is" + finalIncome);
+
+            }
+            CompanyDetails(){
+                //return your name is : ${this.name}, you are${this.age} years old , your monthly salary is ${this.salary}
+                return this.#finalIncome();
+
+            }
+
+        }
+        let Tyford = new Employees( 450000);
+        console.log(Tyford.CompanyDetails());
+
+        
+    </script>
+</body>
+</html>

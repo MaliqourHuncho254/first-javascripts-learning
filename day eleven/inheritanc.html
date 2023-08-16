@@ -1,0 +1,24 @@
+<script>
+    class student{
+        constructor(email,name){
+            this.name = name;
+            this.email = email;
+            
+        }
+        login(){
+                console.log(this.email , 'has logged in');
+            };
+            login(){
+                console.log(this.email , 'has logged in');
+            };
+    }
+    class partTimeStudent extends student{
+
+    }
+    let student1 = new partTimeStudent('student@gmail.com',"student1");
+    class fullTmeStudent extends partTimeStudent{
+      
+    }
+    let firstPerson = new fullTmeStudent( 'student1@gmail.com' , 'student6');
+    
+</script>

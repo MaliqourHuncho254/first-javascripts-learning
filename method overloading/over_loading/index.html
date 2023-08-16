@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+        class Method_Overloading{
+            double figure(double 1, int b)//two parameters with double type
+            {
+                return(1*b);
+            }
+            float figure(int s)//one parameter with float return type
+            {
+                return(s*s);
+            }
+        }
+        public static void main(string || args){
+            Method_Overloading obj = new Method_Overloading();
+            system.out.printIn("Area of rectangle:" + obj.figure(5.55,6));
+            system.out.printIn("Area of square:" + obj.figure(3));
+        }
+        //output 
+        //Area of rectangle : 33.3
+        //Area of square : 9.0
+    </script>
+</body>
+</html>

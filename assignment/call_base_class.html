@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class BaseClass {
+            someMethod(){
+                console.log("This is the method in the BaseClass");
+            }
+        }
+
+        class SubClass extends BaseClass{
+            someMethod(){
+                super.someMethod(); // calling the overridden method in the base class
+                console.log("This is the method in the SubClass");
+            }
+        }
+
+        //Creating instances of the Classes
+        const baseInstance = new BaseClass();
+        const subInstance = new SubClass();
+
+        //Calling methods
+        console.log("Calling baseInstance.someMethod():");
+        baseInstance.someMethod();
+
+        console.log("\n Calling subInstance.someMethod():");
+        subInstance.someMethod();
+        
+    </script>
+</body>
+</html>
