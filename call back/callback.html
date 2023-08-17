@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function showLoading(){
+            console.log("1. Loading Screen Appeared");
+        }
+        function hideLoading(){
+            console.log("4 . Loading Screen Hidden");
+        }
+        function getData(callback){
+            console.log("2. Start pulling data");
+            setTimeout(()=>{
+                console.log("3 . Finished pulling data");
+                callback();
+            }, 2000);
+        }
+        showLoading();
+        getData(hideLoading);
+    </script>
+</body>
+</html>
